@@ -59,13 +59,13 @@ class SequelizeHistory {
 			// table constraints are not applied if added manually
 			this.model.hasMany(this.modelHistory, {
 				foreignKey: 'modelId',
-				contraints: false,
+				constraints: false,
 				as: 'revisions'
 			});
 
 			this.modelHistory.belongsTo(this.model, {
 				foreignKey: 'modelId',
-				contraints: false,
+				constraints: false,
 				as: 'model'
 			});
 		}
